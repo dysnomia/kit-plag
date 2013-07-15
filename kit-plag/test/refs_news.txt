@@ -1,0 +1,7 @@
+news/train-bbc-co-uk.txt
+news/train-ctvnews-ca.txt
+news/train-npr-org-2.txt
+news/train-npr-org.txt
+news/train-scotsman-com.txt
+news/train-thestar-com.txt
+news/train-ap-org.txt

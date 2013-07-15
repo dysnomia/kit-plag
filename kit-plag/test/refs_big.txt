@@ -1,0 +1,13 @@
+big_files/output_dieterwunderlich-de.html
+big_files/output_frankfurt-interaktiv-de.html
+big_files/output_gedichte-xbib-de.html
+big_files/output_gedichtePortal-de.html
+big_files/output_goethezeitportal-de.html
+big_files/output_johann-wolfgang-goethe-de.html
+big_files/output_literaturwelt-com.html
+big_files/output_lorem_classic_10.html
+big_files/output_samuel_classic_30.html
+big_files/output_samuel_lite_10.html
+big_files/output_samuel_lite_20.html
+big_files/output_samuel_lite_5.html
+big_files/output_wikipedia.html

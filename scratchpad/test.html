@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		/*jslint browser:true*/
+		"use strict";
+
+		// Currently visible text
+		var current;
+		// Set display state of text 'name' to 'state'
+		function setDisplay(name, state) {
+			var query = document.getElementById(name + "-query"),
+			    reference = document.getElementById(name + "-reference");
+			query.style.display = state;
+			reference.style.display = state;
+		}
+		// Make new text visible
+		function makeCurrent(name) {
+			setDisplay(current, "none");
+			current = name;
+			setDisplay(current, "block");
+		}
+
+		// Choose the displayed text in the selection box
+		var select;
+		function selectText() {
+			makeCurrent(select[select.selectedIndex].value);
+		}
+
+		// Main divs
+		var query, reference;
+
+		// Init
+		window.onload = function() {
+			select = document.getElementById('select_reference');
+			select.addEventListener('change', selectText, false);
+			query = document.getElementById('query');
+			reference = document.getElementById('reference');
+
+			// Make first text visible
+			current = select[0].value;
+			setDisplay(current, "block");
+		}
+	</script>
+	<style>
+		#main div {
+			display: inline-block;
+			width: 40%;
+			height: 100%;
+			margin: 2% 4%;
+			vertical-align: top;
+		}
+		#reference div {
+			display: none;
+		}
+		#query div {
+			display: none;
+		}
+	</style>
+	<title>Test</title>
+</head>
+<body>
+	<header>
+		<select id="select_reference">
+			<option value="text1">Text 1</option>
+			<option value="text2">Text 2</option>
+		</select>
+	</header>
+	<div id="main">
+		<div id="query">
+		    <div id="text1-query">Left1</div>
+		    <div id="text2-query">Left2</div>
+		</div>
+		<div id="reference">
+			<div id="text1-reference">Text1</div>
+			<div id="text2-reference">Text2</div>
+		</div>
+	</div>
+</body>
+</html>

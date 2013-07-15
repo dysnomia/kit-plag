@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="jquery-1.10.1.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
+    <script src="kit-plag.js"></script>
+    <link rel="stylesheet" href="kit-plag.css" />
+    <title>Test</title>
+  </head>
+  <body>
+    <header>
+      <h1>Test</h1>
+      <p id="global-summary" class="info-text">Global summary:</p>
+      <p class="info-text">Choose a measure and a reference text:</p>
+      <table class="selector"><tr><td>Similarity measure:</td><td>
+        <select id="select-measure">
+          <option value="#measure-full">Full fingerprinting</option>
+          <option value="#measure-random">Random fingerprinting</option>
+          <option value="#measure-variant2">Ranking 2 (log normal, log per word)</option>
+          <option value="#measure-variant3">Ranking 3 (log normal, sum per word)</option>
+          <option value="#measure-variant5">Ranking 5 (log normal, linear per word)</option>
+        </select>
+        </td></tr>
+        <tr><td>Reference text:</td><td>
+        <select id="select-query">
+          <option value=".query-Test 1">Test 1</option>
+          <option value=".query-Test 2">Test 2</option>
+        </select>
+        </td></tr>
+      </table>
+    </header>
+    <div class="main">
+    </div>
+  </body>
+</html>

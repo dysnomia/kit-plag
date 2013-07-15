@@ -1,0 +1,5 @@
+samuel/lorem_classic_10.txt
+samuel/samuel_classic_30.txt
+samuel/samuel_lite_10.txt
+samuel/samuel_lite_20.txt
+samuel/samuel_lite_5.txt

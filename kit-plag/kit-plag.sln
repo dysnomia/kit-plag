@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kit-plag", "kit-plag.vcxproj", "{A09EB612-ACA6-445E-B15A-D2DE3902C550}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unit-tests", "unit-tests\unit-tests.vcxproj", "{445D4046-3D38-421B-B937-C8BEF93B5EFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A09EB612-ACA6-445E-B15A-D2DE3902C550}.Debug|x64.ActiveCfg = Debug|x64
+		{A09EB612-ACA6-445E-B15A-D2DE3902C550}.Debug|x64.Build.0 = Debug|x64
+		{A09EB612-ACA6-445E-B15A-D2DE3902C550}.Debug|x64.Deploy.0 = Debug|x64
+		{A09EB612-ACA6-445E-B15A-D2DE3902C550}.Release|x64.ActiveCfg = Release|x64
+		{A09EB612-ACA6-445E-B15A-D2DE3902C550}.Release|x64.Build.0 = Release|x64
+		{A09EB612-ACA6-445E-B15A-D2DE3902C550}.Release|x64.Deploy.0 = Release|x64
+		{445D4046-3D38-421B-B937-C8BEF93B5EFB}.Debug|x64.ActiveCfg = Debug|x64
+		{445D4046-3D38-421B-B937-C8BEF93B5EFB}.Debug|x64.Build.0 = Debug|x64
+		{445D4046-3D38-421B-B937-C8BEF93B5EFB}.Debug|x64.Deploy.0 = Debug|x64
+		{445D4046-3D38-421B-B937-C8BEF93B5EFB}.Release|x64.ActiveCfg = Release|x64
+		{445D4046-3D38-421B-B937-C8BEF93B5EFB}.Release|x64.Build.0 = Release|x64
+		{445D4046-3D38-421B-B937-C8BEF93B5EFB}.Release|x64.Deploy.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Text Files">
+      <UniqueIdentifier>{43f4c07c-1481-4a2e-8600-54f69befb98c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Text Files\Test Files">
+      <UniqueIdentifier>{b3305aaf-9817-40ad-aa96-c95d990fc7f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Text Files\Data Files">
+      <UniqueIdentifier>{44224af9-90ba-4ab7-9e12-7c6cb7a023fb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\preprocess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fileutils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\visualize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ranking.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\process.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fingerprinting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\preprocess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fileutils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\visualize.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\trie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ranking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fingerprinting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\process.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\consts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\plag_algorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\stop-words.txt">
+      <Filter>Text Files\Data Files</Filter>
+    </Text>
+    <Text Include="data\stop-words-german.txt">
+      <Filter>Text Files\Data Files</Filter>
+    </Text>
+    <Text Include="data\stop-words-union.txt">
+      <Filter>Text Files\Data Files</Filter>
+    </Text>
+    <Text Include="test\queries.txt">
+      <Filter>Text Files\Test Files</Filter>
+    </Text>
+    <Text Include="test\queries_big.txt">
+      <Filter>Text Files\Test Files</Filter>
+    </Text>
+    <Text Include="test\queries_goethe.txt">
+      <Filter>Text Files\Test Files</Filter>
+    </Text>
+    <Text Include="test\queries_raven.txt">
+      <Filter>Text Files\Test Files</Filter>
+    </Text>
+    <Text Include="test\queries_samuel.txt">
+      <Filter>Text Files\Test Files</Filter>
+    </Text>
+    <Text Include="test\refs.txt">
+      <Filter>Text Files\Test Files</Filter>
+    </Text>
+    <Text Include="test\refs_big.txt">
+      <Filter>Text Files\Test Files</Filter>
+    </Text>
+    <Text Include="test\refs_goethe.txt">
+      <Filter>Text Files\Test Files</Filter>
+    </Text>
+    <Text Include="test\refs_raven.txt">
+      <Filter>Text Files\Test Files</Filter>
+    </Text>
+    <Text Include="test\refs_samuel.txt">
+      <Filter>Text Files\Test Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,8 @@
+goethe/dieterwunderlich-de.txt
+goethe/frankfurt-interaktiv-de.txt
+goethe/gedichte-xbib-de.txt
+goethe/gedichtePortal-de.txt
+goethe/goethezeitportal-de.txt
+goethe/johann-wolfgang-goethe-de.txt
+goethe/literaturwelt-com.txt
+goethe/wikipedia.txt

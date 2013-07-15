@@ -1,0 +1,81 @@
+/* At the start: hide every text */
+.measure {
+	display: none;
+}
+.measure > div {
+	display: none;
+}
+
+/* Main comparison display */
+.query, .ref {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Global summary table */
+.global-summary tbody th:first-child {
+	border-right: 2px solid black;
+}
+.global-summary thead th:first-child {
+	border-bottom: 0 solid black;
+}
+
+/* Informational heading text */
+.info-text {
+	font-weight: bold;
+}
+
+/* Mark for matching subsequences/important words. Special highlight on click and hover. */
+.marked {
+	color: red;
+	border: 1px dashed red;
+	cursor: pointer;
+}
+.highlighted-click {
+	background-color: yellow;
+	color: black;
+}
+.highlighted-hover {
+	background-color: rgb(220,255,220);
+}
+
+/* General styles */
+table {
+	border-collapse: collapse;
+	margin-left: 50px;
+}
+th {
+	font-style: italic;
+	font-weight: normal;
+	padding: 2px 10px;
+}
+thead th {
+	border-bottom: 2px solid black;
+}
+body {
+	margin-left: 100px;
+	font-family: "Cambria", serif;
+}
+pre {
+	font-family: "Consolas", monospace;
+	font-size: 9pt;
+}
+h1 {
+	font-size: 20pt;
+}
+select {
+	font-family: "Cambria", serif;
+	width: 200px;
+}
+td {
+	padding: 0 5px;
+}
+pre {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+/* Debug borders.
+* {
+	border: 1px dashed blue;
+}*/

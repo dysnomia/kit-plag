@@ -1,0 +1,17 @@
+*.suo
+*.sdf
+*.aux
+*.fmt
+*.nav
+*.snm
+*.synctex.gz
+*.toc
+*.bbl
+*.bcf
+*.blg
+*.bak
+*.vrb
+*.opensdf
+*.sublime-workspace
+*.sublime-project
+*.run.xml

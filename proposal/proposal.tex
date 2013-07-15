@@ -1,0 +1,130 @@
+%&proposal
+\documentclass[german,simple]{mybeamer}
+%\dump
+
+\title{Plagiatsdetektor}
+\subtitle{Textindexierung}
+\date{10. Juni 2013}
+\author{Daniel Hoske und Stefan Walzer}
+
+\begin{document}
+\maketitle
+
+\begin{frame}{$1$-zu-$n$ Plagiatsproblem}
+\begin{itemize}
+  \item Gegeben: Dokumentmenge $D$, Query-Dokument~$q$
+  \item Gesucht: Dokumente~$d \in D$, die zu $q$ „ähnlich“ sind (Plagiate)
+  \item[$\Rightarrow$] Ähnlichkeitsmaß~$\delta(d, q)$
+  %\item Idee: Stelle fest, ob $d$ und~$q$ Derivate eines gleichen Ursprungsdokuments sind
+  \item Wollen erkennen: \alert{Clone (global)}, \alert{Ctrl+C (lokal)}, Find-Replace, \textcolor{gray}{Remix}, \textcolor{gray}{Mashup}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Grober Ablauf}
+$3$~Phasen:
+\begin{itemize}
+    \item Normalisierung von~$q$
+    \item Plagiatssuche:
+    \begin{itemize}
+      \item Ranking: global
+      \item Fingerprinting: lokal
+    \end{itemize}
+    \item Visualisierung ähnlicher Stellen
+\end{itemize}
+Orientiert an Hoad und Zobel, 2003
+\end{frame}
+
+\section{Normalisierung}
+
+\begin{frame}{Normalisierung}
+\begin{itemize}
+    \item Eingabe: unstrukturierter englischer Text~$q$
+    \item<2-> parse in Wörter (z.B. \lstinline{[[:alnum:]]+}) und Sätze
+    \item<2-> wandele in Kleinbuchstaben um
+    \item<2-> entferne Stoppwörter (the, of, may, \dots)
+    \item<2-> entferne Zitate (zwischen ``'' oder `')
+    \item<2-> (normaliere Beugungen und Synonyme)
+    \item Ausgabe: normalisierter englischer Text~$\widetilde{q}$, Index von $\widetilde{q}$ nach~$q$
+\end{itemize}
+\end{frame}
+
+\section{Plagiatssuche}
+
+\begin{frame}{Plagiatssuche: Ranking}
+  \begin{itemize}
+      \item Ansatz: Plagiate benutzen Wörter mit ähnlichen Frequenzen
+      \item Beispiel für ein Ähnlichkeitsmaß basierend auf Wortfrequenzen:
+      \[ \frac{1}{1+|f_d - f_q|}\sum_{t\in q\cap d} \frac{\log(N/f_t)}{1+|f_{d,t}-f_{q,t}|} \]
+      \item weitere Ad-hoc-Vorschläge für Maße in Hoad und Zobel 2003
+      \item \emph{Invertierter Index} auf~$D$ mit Wortfrequenzen
+      \item Laufzeit: $O\bigl(\sum_{t\in q} f_t\bigr)$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Plagiatssuche: Fingerprinting}
+  \begin{itemize}
+    \item baue kompakte Beschreibungen ($m$ \emph{minutiae}, Ganzzahlen) der Dokumente
+    und vergleiche diese
+    \item minutia $\approx$ Hash eines Teilstrings
+    \item Ähnlichkeitsmaß = Anzahl gleicher minutiae
+    \item Hashfunktion gibt ähnlichen Texten ähnliche Werte\\
+    (siehe z.B. Ramakrishna und Zobel, 1997)
+    \item Substringauswahl: alle $r$-Gramme, \dots
+    \item Laufzeit: verschieden\dots %$O(rd)$, \dots
+  \end{itemize}
+\end{frame}
+
+\section{Visualisierung \& Test}
+
+\begin{frame}{Visualisierung}
+  \begin{itemize}
+    \item HTML-Ausgabe mit Markierung von Übereinstimmungen
+    \item Ranking: Wörter mit ähnlichen Frequenzen
+    \item Fingerprinting: Substrings mit übereinstimmenden Hashes (oder Sätze, die diese enthalten)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Test}
+\begin{itemize}
+
+  \item Scorenormalisierung: $\widehat{\delta}(q, d) := \delta(q, d) / \delta(q, q)$
+%  \item bestimme manuell: $\widetilde{\delta}(q, d)$ Referenz
+  \item vergleiche Werte von verschiedenen Strategien
+  \item greife Beispiele raus (plausibel oder nicht)
+%  \item Ziel ist möglichst große Separation: \[\min_{d\in S(q)} \widetilde{d}(q, d) - \max_{d\not\in S(q)} \widetilde{d}(q, d)\]
+  \item Welche Dokumentsammlungen? (Guttenplag, \dots)
+\end{itemize}
+\end{frame}
+
+\section{Erweiterungen}
+
+\begin{frame}{Erweiterungen}
+  Exakter Vergleich:
+  \begin{itemize}
+    \item Suffixarrays (vielleicht Onlinealgorithmus nach Ukkonen)
+    %\item Online-Konstruktion eines Suffixbaums: Baum für~$D$ vorberechnet,
+    %füge $q$ hinzu (Ukkonen's)
+    %\item finde möglichst lange gleiche Teilstrings durch Aufstieg aus zu $q$ gehörenden Blättern
+    \item[$\Rightarrow$] spezifischer, weniger robust
+  \end{itemize}
+  \pause
+  $1$-zu-$0$ Plagiatsproblem:
+  \begin{itemize}
+    \item erkenne stilistische Veränderungen in einem Dokument 
+    \item[$\Rightarrow$] weist auf Abschreiben hin
+    %\item vielleicht Antrainieren auf Basis 
+  \end{itemize}
+  \pause
+  Vorberechnung und Visualisierung nicht wesentlich erweiterbar\dots
+\end{frame}
+
+\begin{frame}{Ende}
+\vfill
+\begin{center}
+Vielen Dank für eure Aufmerksamkeit.\\
+Habt ihr noch irgendwelche Anmerkungen oder Fragen?
+\end{center}
+\vfill
+\end{frame}
+
+\end{document}

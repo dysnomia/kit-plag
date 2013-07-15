@@ -1,0 +1,18 @@
+[
+	{
+		"caption": "My: Normalise German text",
+		"command": "my_substitute",
+		"args": {
+			"from": ["ä",  "ö",  "ü",  "Ä",  "Ö",  "Ü",  "ß",  "[„|”|“|«|»]",  "[‚|‘|’|`]", "[—|–]", "é|è", "É"],
+			"to":   ["ae", "oe", "ue", "Ae", "Oe", "Ue", "ss", "\"",      "'",              "-",     "e",   "E"]
+		},
+	},
+	{
+		"caption": "My: Remove Wikipedia markup",
+		"command": "my_substitute",
+		"args": {
+			"from": ["(?s)\\{\\{?.*?\\}?\\}", "\\[\\[.*?([^|:\\]]+?)\\]\\]", "\\[\\S+ ([^\\]]+)\\]", "<.*?>"],
+			"to":   ["", "\\1", "\\1", ""]
+		}
+	}
+]
