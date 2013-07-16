@@ -9,7 +9,11 @@
 
 /* Preprocessing step. */
 const std::string FILE_STOP_WORDS = "data/stop-words-union.txt";
-const REGEX_NAMESPACE::regex REGEX_WORD("[\\w]([\\w']|(\\s*-\\s*))+", REGEX_NAMESPACE::regex::optimize);
+const REGEX_NAMESPACE::regex REGEX_WORD(
+	"[\\w]"                  /* Must start with a word character. */
+	"([\\w']|(\\s*-\\s*))+", /* Can be extended by word characters, apostrophes, or dashes surrounded by spaces. */
+	REGEX_NAMESPACE::regex::optimize
+);
 
 /* Ranking. */
 const double RANKING_MAX_VISUALIZE = 0.8;
