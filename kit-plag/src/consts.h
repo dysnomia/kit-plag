@@ -9,7 +9,7 @@
 
 /* Preprocessing step. */
 const std::string FILE_STOP_WORDS = "data/stop-words-union.txt";
-const REGEX_NAMESPACE::regex REGEX_WORD("[\\w]([\\w']|(\\s*-\\s*))+");
+const REGEX_NAMESPACE::regex REGEX_WORD("[\\w]([\\w']|(\\s*-\\s*))+", REGEX_NAMESPACE::regex::optimize);
 
 /* Ranking. */
 const double RANKING_MAX_VISUALIZE = 0.8;
