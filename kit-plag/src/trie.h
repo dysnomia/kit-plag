@@ -50,6 +50,7 @@ public:
 	}
 	Trie& operator=(Trie&& other) {
 		root = std::move(other.root);
+		other.root = new_node();
 		return *this;
 	}
 

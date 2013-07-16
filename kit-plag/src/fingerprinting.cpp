@@ -1,4 +1,5 @@
 #include "common.h"
+#include "consts.h"
 #include "fingerprinting.h"
 #include "fileutils.h"
 

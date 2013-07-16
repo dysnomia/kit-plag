@@ -1,4 +1,5 @@
 #include "common.h"
+#include "consts.h"
 #include "ranking.h"
 #include "fileutils.h"
 

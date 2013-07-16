@@ -1,4 +1,5 @@
 #include "common.h"
+#include "consts.h"
 #include "preprocess.h"
 #include "fileutils.h"
 

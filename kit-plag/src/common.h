@@ -52,7 +52,4 @@
 #define REGEX_NAMESPACE boost
 #endif
 
-/* Compile-time configuration */
-#include "consts.h"
-
 #endif
